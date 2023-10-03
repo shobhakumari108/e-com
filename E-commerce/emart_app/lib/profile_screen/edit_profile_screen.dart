@@ -84,7 +84,7 @@ class EditProfileScreen extends StatelessWidget {
                         onPress: () async {
                           controller.isloading(true);
                           //if image is not selected
-                          if (controller.profileImgPath.value.isEmpty) {
+                          if (controller.profileImgPath.value.isNotEmpty) {
                             await controller.uploadprofileImage();
                           } else {
                             controller.profileImgLink = data['imageUrl'];
